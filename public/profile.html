@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/public/css/profile.css" />
+</head>
+<body>
+  <div class="profile-page">
+    <div class="profile-container">
+      <!-- Profile Header -->
+      <div class="profile-header">
+        <div class="profile-pic">
+          <img id="profile-picture" src="" alt="Profile Picture" />
+        </div>
+        <div class="profile-info">
+          <h2 id="username">Nameless</h2>
+          <p id="email">akintundepraise003@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="profile-sections">
+        <a href="/public/cards.html" class="section-item">Cards</a>
+        <a href="/public/tranhis.html" class="section-item">Transaction History</a>
+        <a href="/public/exprem.html" class="section-item">Expiry Reminder</a>
+        <a href="/public/forgot.html" class="section-item">Reset Password</a>
+      </div>
+
+      <!-- Logout Button -->
+      <div class="logout-container">
+        <button id="logout-btn" class="logout-btn">Log Out</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const token = sessionStorage.getItem('token');
+
+      if (!token) {
+        alert("You must log in first!");
+        window.location.href = '/login.html';
+        return;
+      }
+
+      try {
+        const res = await fetch('http://localhost:5000/profile', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        // Populate profile details
+        document.getElementById('username').innerText = data.username;
+        document.getElementById('email').innerText = data.email;
+        document.getElementById('profile-picture').src = data.profile_picture || '/public/img/default-avatar.png';
+
+      } catch (err) {
+        console.error('Error fetching profile:', err);
+        alert('Failed to load profile. Please log in again.');
+        window.location.href = '/login.html';
+      }
+    });
+
+    // Logout handler
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      sessionStorage.removeItem('token');
+      window.location.href = '/login.html';
+    });
+  </script>
+</body>
+</html>

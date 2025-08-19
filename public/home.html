@@ -3,34 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Profile</title>
-  <link rel="stylesheet" href="/public/css/profile.css" />
+  <title>Home - Jupiter</title>
+  <link rel="stylesheet" href="/css/home.css" />
 </head>
 <body>
-  <div class="profile-page">
-    <div class="profile-container">
-      <!-- Profile Header -->
-      <div class="profile-header">
-        <div class="profile-pic">
-          <img id="profile-picture" src="" alt="Profile Picture" />
+  <div class="home-container">
+
+    <!-- Card Carousel & Transaction History -->
+    <div class="top-section">
+      <!-- Card Carousel -->
+      <div>
+        <div class="card-carousel">
+          <div class="card">
+            <div class="card-header">
+              <a href="/profile.html" class="profile-link">
+                <div class="profile-pic">J</div>
+                <div class="welcome">Welcome, JohnDoe</div>
+              </a>
+              <div class="card-type">Visa</div>
+            </div>
+            <div class="card-number">**** **** **** 1234</div>
+            <div class="bank-name">Zenith Bank</div>
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
         </div>
-        <div class="profile-info">
-          <h2 id="username"></h2>
-          <p id="email"></p>
+
+        <!-- Expiry Reminder directly under the carousel -->
+        <div class="expiry-reminder">
+          <h3></style><a href="/expiry-reminder.html" class="section-link">Expiry Reminder</a></h3>
+          <div class="reminder-entry">
+            <div>Netflix</div>
+            <div>₦4,500</div>
+          </div>
+          <div class="reminder-entry">
+            <div>2025-09-15</div>
+          </div>
         </div>
       </div>
 
-      <!-- Navigation Buttons -->
-      <div class="profile-sections">
-        <a href="cards.html" class="section-item">Cards</a>
-        <a href="transactions.html" class="section-item">Transaction History</a>
-        <a href="expiry.html" class="section-item">Expiry Reminder</a>
-        <a href="reset.html" class="section-item">Reset Password</a>
+      <!-- Transactions History (aligned right) -->
+      <div class="transactions-history">
+        <h3><a href="/transactions.html" class="section-link">Transactions History</a></h3>
+        <div class="filters">
+          <div>Category ▼</div>
+          <div>Current Month ▼</div>
+          <div>Total: ₦22,000</div>
+        </div>
+        <div class="transaction-list">
+          <div class="transaction-entry">
+            <div>Streaming</div>
+            <div>Netflix</div>
+            <div>2025-08-01</div>
+            <div>₦4,500</div>
+            <div>Paid</div>
+          </div>
+          <div class="transaction-entry">
+            <div>Music</div>
+            <div>Spotify</div>
+            <div>2025-08-03</div>
+            <div>₦1,200</div>
+            <div>Pending</div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- Logout Button -->
-      <div class="logout-container">
-        <button id="logout-btn" class="logout-btn">Log Out</button>
+    <!-- Services Section -->
+    <h2 class="section-title">Service Payments Hub</h2>
+    <div class="service-sections">
+      <div class="service-category">
+        <h3>Streaming</h3>
+        <div class="icons">
+          <img src="icons/netflix.png" alt="Netflix"/>
+          <img src="icons/hulu.png" alt="Hulu"/>
+          <img src="icons/apple.png" alt="Apple"/>
+        </div>
+      </div>
+      <div class="service-category">
+        <h3>Music</h3>
+        <div class="icons">
+          <img src="icons/spotify.png" alt="Spotify"/>
+          <img src="icons/youtube.png" alt="YouTube Music"/>
+          <img src="icons/audiomack.png" alt="Audiomack"/>
+        </div>
+      </div>
+      <div class="service-category">
+        <h3>Productivity</h3>
+        <div class="icons">
+          <img src="icons/canva.png" alt="Canva"/>
+          <img src="icons/chatgpt.png" alt="ChatGPT"/>
+        </div>
+      </div>
+      <div class="service-category">
+        <h3>Socials</h3>
+        <div class="icons">
+          <img src="icons/snapchat.png" alt="Snapchat"/>
+          <img src="icons/telegram.png" alt="Telegram"/>
+          <img src="icons/x.png" alt="X"/>
+        </div>
+      </div>
+      <div class="service-category">
+        <h3>Airtime/Data</h3>
+        <div class="icons">
+          <img src="icons/mtn.png" alt="MTN"/>
+          <img src="icons/glo.png" alt="Glo"/>
+          <img src="icons/airtel.png" alt="Airtel"/>
+          <img src="icons/9mobile.png" alt="9mobile"/>
+        </div>
+      </div>
+      <div class="service-category">
+        <h3>Decoders</h3>
+        <div class="icons">
+          <img src="icons/gotv.png" alt="GoTV"/>
+          <img src="icons/startimes.png" alt="Startimes"/>
+          <img src="icons/dstv.png" alt="DSTV"/>
+        </div>
       </div>
     </div>
   </div>

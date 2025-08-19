@@ -8,6 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Default route → show landing.html first
 app.use('/css', express.static(path.join(__dirname, 'public', 'css')));
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'landing.html'));
 });
@@ -39,6 +40,10 @@ app.get('/reset', (req, res) => {
 
 app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'signup.html'));
+});
+
+app.get('/profile', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'profile.html'));
 });
 
 // Start the frontend server

@@ -29,6 +29,7 @@ body {
       border-radius: 15px;
       padding: 10px;
       color: #fff;
+      margin-left: 50px;
     }
 
     .card-header {
@@ -50,7 +51,7 @@ body {
       background-color: #D4AF37;
       padding: 10px 15px;
       border-radius: 50px;
-      margin-left: 10px;
+      margin-left: 50px;
     }
 
     .card-type {
@@ -87,13 +88,14 @@ body {
 
     .dot.active {
       background-color: #fff;
+      margin-left: 60px;
     }
 
     .transactions-history {
       background-color: #000;
       border-radius: 10px;
       padding: 15px;
-      width: 350px;
+      width: 450px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
       flex-shrink: 0;
     }
@@ -134,10 +136,11 @@ body {
     .expiry-reminder {
       background-color: #000;
       border-radius: 10px;
-      width: 700px;
+      width: 630px;
       margin-top: 20px;
+      margin-left: 50px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      padding: 15px;
+      padding: 10px;
       color: #ccc;
     }
 

@@ -133,6 +133,44 @@ body {
       box-shadow: 0 0 3px rgba(255, 255, 255, 0.05);
     }
 
+    .transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* spacing between rows */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.transaction thead th {
+  background: #f4f4f4;
+  color: #333;
+  padding: 14px 20px;
+  font-weight: bold;
+  border-bottom: 2px
+}
+
+.transaction-table tbody tr {
+  border-radius: 8px;
+}
+
+.transaction-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.transaction-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Optional hover effect */
+.transaction-table tbody tr:hover {
+  background: #fff;
+  color: black;
+  transition: background 0.2s ease-in-out;
+}
+
+
     .expiry-reminder {
       background-color: #000;
       border-radius: 10px;
@@ -150,6 +188,42 @@ body {
       padding: 8px 10px;
       font-size: 14px;
     }
+.reminder-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; /* spacing between rows */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.reminder-table thead th {
+  background: #f4f4f4;
+  color: #333;
+  padding: 14px 20px;
+  font-weight: bold;
+  border-bottom: 2px
+}
+
+.reminder-table tbody tr {
+  border-radius: 8px;
+}
+
+.reminder-table tbody td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.reminder-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Optional hover effect */
+.reminder-table tbody tr:hover {
+  background: #fff;
+  color: black;
+  transition: background 0.2s ease-in-out;
+}
 
     .section-title {
       text-align: center;

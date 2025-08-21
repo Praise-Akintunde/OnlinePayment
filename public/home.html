@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home - Jupiter</title>
-  <link rel="stylesheet" href="/public/css/home.css" />
+  <link rel="stylesheet" href="/css/home.css" />
 </head>
 <body>
   <div class="home-container">
@@ -36,11 +36,22 @@
         <div class="expiry-reminder">
           <h3 style="color: #D4AF37;">Expiry Reminder<a href="/expiry-reminder.html" class="section-link"></a></h3>
           <div class="reminder-entry">
-            <div>Netflix</div>
-            <div>₦4,500</div>
-          </div>
-          <div class="reminder-entry">
-            <div>2025-09-15</div>
+             <table class="reminder-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Netflix</td>
+                  <td>2025-08-01</td>
+                  <td>₦4,500</td>
+                </tr>
+              </tbody>
+             </table>
           </div>
         </div>
       </div>
@@ -48,30 +59,44 @@
       <!-- Transactions History (aligned right) -->
       <div class="transactions-history">
         <h3 style="color: #D4AF37;">Transation History<a href="/transactions.html" class="section-link"></a></h3>
-        <div class="filters">
-          <div>Category ▼</div>
-          <div>Current Month ▼</div>
-          <div>Total: ₦22,000</div>
-        </div>
+          <div class="filters">
+            <div>Category ▼</div>
+            <div>Current Month ▼</div>
+            <div>Total: ₦22,000</div>
+          </div>
         <div class="transaction-list">
           <div class="transaction-entry">
-            <div>Streaming</div>
-            <div>Netflix</div>
-            <div>2025-08-01</div>
-            <div>₦4,500</div>
-            <div>Paid</div>
-          </div>
-          <div class="transaction-entry">
-            <div>Music</div>
-            <div>Spotify</div>
-            <div>2025-08-03</div>
-            <div>₦1,200</div>
-            <div>Pending</div>
+            <table class="transaction-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Service</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Streaming</td>
+                  <td>Netflix</td>
+                  <td>2025-09-15</td>
+                  <td>₦4,500</td>
+                  <td class="paid">Paid</td>
+                </tr>
+                <tr>
+                  <td>Music</td>
+                  <td>Spotify</td>
+                  <td>2025-08-03</td>
+                  <td>₦1,200</td>
+                  <td class="pending">Pending</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Services Section -->
     <h2 class="section-title">Service Payments Hub</h2>
     <div class="service-sections">
